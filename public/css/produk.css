@@ -1,6 +1,6 @@
 /* ============================
-           Produk Section
-           ============================ */
+           Produk Section (Default / Emas)
+   ============================ */
 .produk {
     padding: 8rem 1.5rem;
     background: linear-gradient(to bottom, var(--dark-charcoal), var(--dark-gray));
@@ -38,7 +38,6 @@
     border: 2px solid var(--gold-primary);
     position: relative;
     z-index: 2;
-    animation-duration: 1s;
 }
 
 .produk-card::before {
@@ -56,7 +55,6 @@
     transform: translateY(-10px);
     box-shadow: 0 15px 35px rgba(212, 175, 55, 0.3);
     border-color: var(--gold-secondary);
-    animation: pulse 1s;
 }
 
 .produk-image {
@@ -77,9 +75,23 @@
     position: absolute;
     width: 150%;
     height: 40px;
-    background: rgba(212, 175, 55, 0.3);
-    transform: rotate(-45deg) translateY(-50px);
+    background: linear-gradient(
+        135deg,
+        rgba(255, 215, 0, 0.5) 0%,
+        rgba(212, 175, 55, 0.3) 50%,
+        transparent 100%
+    );
+    transform: rotate(-45deg) translateY(-120px);
     animation: shine 3s infinite linear;
+}
+
+@keyframes shine {
+    0% {
+        transform: rotate(-45deg) translateY(-120px);
+    }
+    100% {
+        transform: rotate(-45deg) translateY(400px);
+    }
 }
 
 .produk-content {
@@ -97,4 +109,98 @@
     color: var(--off-white);
     font-size: 1rem;
     margin-bottom: 1.5rem;
+}
+
+/* ============================
+   Silver Theme (Perak)
+   ============================ */
+:root {
+    --silver-primary: #c0c0c0;
+    --silver-secondary: #e0e0e0;
+}
+
+.produk.perak .produk-card {
+    border: 2px solid var(--silver-primary);
+}
+
+.produk.perak .produk-card:hover {
+    box-shadow: 0 15px 35px rgba(192, 192, 192, 0.3);
+    border-color: var(--silver-secondary);
+}
+
+.produk.perak .produk-content h4 {
+    color: var(--silver-primary) !important; /* override emas */
+}
+
+.silver-bg {
+    background: linear-gradient(135deg, #b0b0b0 0%, #f0f0f0 100%);
+}
+
+.text-silver {
+    color: var(--silver-primary);
+}
+
+.btn-silver {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: var(--silver-primary);
+    color: #222;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-silver:hover {
+    background: var(--silver-secondary);
+    color: #000;
+}
+
+/* Animasi Shine untuk Perak */
+.produk.perak .produk-image {
+    color: var(--silver-primary);
+}
+
+.produk.perak .produk-image::before {
+    content: '';
+    position: absolute;
+    width: 150%;
+    height: 40px;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.6) 0%,
+        rgba(192, 192, 192, 0.3) 50%,
+        transparent 100%
+    );
+    transform: rotate(-45deg) translateY(-120px);
+    animation: shineSilver 3s infinite linear;
+}
+
+@keyframes shineSilver {
+    0% {
+        transform: rotate(-45deg) translateY(-120px);
+    }
+    100% {
+        transform: rotate(-45deg) translateY(400px);
+    }
+}
+.produk-image img {
+    width: 100%;
+    height: auto;
+    max-width: 120px; /* biar seragam */
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+/* ============================
+   Heading khusus Perak
+   ============================ */
+.produk.perak h3.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--silver-primary) !important; /* paksa jadi silver */
+    margin-bottom: 2rem;
+    display: inline-block;
+    text-transform: none;
 }

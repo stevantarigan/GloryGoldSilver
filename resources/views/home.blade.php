@@ -8,5 +8,6 @@
     @include('partials.harga')
     @include('partials.tentang')
     @include('partials.kontak')
+
 @endsection
 

@@ -58,6 +58,14 @@ header .logo h1 {
     font-size: 1.8rem;
     text-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
 }
+.logo-link {
+    text-decoration: none;
+    color: inherit; /* ikut warna default header */
+}
+
+.logo-link:hover {
+    opacity: 0.85; /* efek hover tipis */
+}
 
 header nav {
     display: flex;
