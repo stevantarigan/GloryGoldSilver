@@ -1,0 +1,40 @@
+/* ============================
+           Tentang Section
+           ============================ */
+.tentang {
+    padding: 8rem 1.5rem;
+    background: linear-gradient(to bottom, var(--dark-gray), var(--dark-charcoal));
+    text-align: center;
+    position: relative;
+}
+
+.tentang::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://images.unsplash.com/photo-1586083702769-69d5a41cfe70?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80') center center / cover fixed;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.tentang-container {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.tentang-container p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--off-white);
+    background: rgba(26, 26, 26, 0.8);
+    padding: 2rem;
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    border: 2px solid var(--gold-primary);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
