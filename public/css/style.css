@@ -364,8 +364,9 @@ section {
     }
 
     .hero-content h2 {
-        font-size: 2.5rem;
-    }
+    color: red !important;
+}
+
 
     .hero-content p {
         font-size: 1.2rem;
