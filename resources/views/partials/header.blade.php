@@ -1,13 +1,15 @@
 <header>
     <div class="logo">
-        <h1>Glory Gold</h1>
+        <a href="{{ url('/') }}" class="logo-link">
+            <h1>Glory Gold</h1>
+        </a>
     </div>
     <nav>
         <div class="nav-item">
             <a href="#produk">Produk <i class="fas fa-chevron-down"></i></a>
             <div class="dropdown">
-                <a href="#emas">Emas</a>
-                <a href="#perak">Perak</a>
+                <a href="{{ route('katalog.emas') }}">Emas</a>
+                <a href="{{ route('katalog.perak') }}">Perak</a>
             </div>
         </div>
         <a href="#harga">Harga</a>
