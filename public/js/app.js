@@ -8,8 +8,10 @@ window.addEventListener('scroll', function () {
   }
 });
 
-// Mobile menu toggle
+// Jalankan setelah DOM siap
 document.addEventListener('DOMContentLoaded', function () {
+
+  // ===== Mobile menu toggle =====
   const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
   const nav = document.querySelector('header nav');
 
@@ -20,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Animasi elemen saat scroll dengan Intersection Observer
+  // ===== Animasi setiap section saat scroll =====
   const animatedElements = document.querySelectorAll('.produk-card, .harga-box, .tentang-container, .kontak-container, .hero-content, .section-title');
 
   const observerOptions = {
@@ -31,64 +33,62 @@ document.addEventListener('DOMContentLoaded', function () {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        if (entry.target.classList.contains('section-title')) {
-          entry.target.style.animation = 'titleReveal 1.2s ease-out forwards';
-        } else if (entry.target.classList.contains('hero-content')) {
-          entry.target.style.animation = 'heroEntrance 1.5s ease-out forwards';
+        const el = entry.target;
+
+        if (el.classList.contains('section-title')) {
+          el.style.animation = 'titleReveal 1.2s ease-out forwards';
+        } else if (el.classList.contains('hero-content')) {
+          el.style.animation = 'heroEntrance 1.5s ease-out forwards';
         } else {
-          entry.target.style.animation = 'fadeUpIn 0.8s ease-out forwards';
-          // Stagger animation untuk grid items
-          if (entry.target.parentElement.classList.contains('produk-grid')) {
-            const index = Array.from(entry.target.parentElement.children).indexOf(entry.target);
-            entry.target.style.animationDelay = `${index * 0.2}s`;
+          el.style.animation = 'fadeUpIn 0.8s ease-out forwards';
+          // Stagger untuk grid
+          if (el.parentElement.classList.contains('produk-grid')) {
+            const index = Array.from(el.parentElement.children).indexOf(el);
+            el.style.animationDelay = `${index * 0.2}s`;
           }
         }
-        observer.unobserve(entry.target);
+
+        observer.unobserve(el);
       }
     });
   }, observerOptions);
 
-  animatedElements.forEach(el => {
-    observer.observe(el);
-  });
+  animatedElements.forEach(el => observer.observe(el));
 
-  // Animasi untuk tombol
+  // ===== Animasi tombol =====
   const buttons = document.querySelectorAll('.btn-gold, .kontak-btn');
   buttons.forEach(button => {
     button.addEventListener('mouseenter', function () {
       this.style.animation = 'pulse 1s infinite, buttonShine 2s infinite';
     });
-
     button.addEventListener('mouseleave', function () {
       this.style.animation = 'none';
     });
   });
 
-  // Animasi counter untuk harga
-  const hargaBox = document.querySelector('.harga-box');
-  if (hargaBox) {
-    const emasElement = hargaBox.querySelector('.emas');
-    const perakElement = hargaBox.querySelector('.perak');
+  // ===== Animasi counter harga =====
+  const hargaBoxes = document.querySelectorAll('.harga-box');
+  hargaBoxes.forEach(hargaBox => {
+    const emasEl = hargaBox.querySelector('.emas');
+    const perakEl = hargaBox.querySelector('.perak');
 
-    if (emasElement && perakElement) {
-      // Simulasi perubahan harga (bisa diganti dengan data real)
+    if (emasEl && perakEl) {
       setInterval(() => {
-        animateValueChange(emasElement, 1050000, 1050000 + Math.floor(Math.random() * 50000) - 25000);
-        animateValueChange(perakElement, 12000, 12000 + Math.floor(Math.random() * 2000) - 1000);
-      }, 30000); // Update setiap 30 detik
-    }
-  }
-
-  // Parallax effect untuk hero section
-  window.addEventListener('scroll', function () {
-    const scrolled = window.pageYOffset;
-    const hero = document.querySelector('.hero');
-    if (hero) {
-      hero.style.backgroundPositionY = -(scrolled * 0.5) + 'px';
+        animateValueChange(emasEl, 1050000, 1050000 + Math.floor(Math.random() * 50000) - 25000);
+        animateValueChange(perakEl, 12000, 12000 + Math.floor(Math.random() * 2000) - 1000);
+      }, 30000);
     }
   });
 
-  // Typing effect untuk hero text (jika diinginkan)
+  // ===== Parallax hero =====
+  const hero = document.querySelector('.hero');
+  if (hero) {
+    window.addEventListener('scroll', function () {
+      hero.style.backgroundPositionY = -(window.pageYOffset * 0.5) + 'px';
+    });
+  }
+
+  // ===== Typing effect (opsional) =====
   const heroText = document.querySelector('.hero-content h2');
   if (heroText) {
     const originalText = heroText.textContent;
@@ -103,12 +103,15 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
 
-    // Uncomment line below to enable typing effect
+    // Uncomment untuk aktifkan
     // setTimeout(typeWriter, 1000);
   }
+
+  // ===== Partikel emas di hero =====
+  createGoldParticles();
 });
 
-// Fungsi untuk animasi perubahan nilai
+// ===== Fungsi Helper =====
 function animateValueChange(element, start, end) {
   const duration = 2000;
   const range = end - start;
@@ -116,26 +119,23 @@ function animateValueChange(element, start, end) {
   const stepTime = Math.abs(Math.floor(duration / range));
   let current = start;
 
-  const timer = setInterval(function () {
+  const timer = setInterval(() => {
     current += increment;
+
     if (element.classList.contains('emas')) {
       element.textContent = `Emas: Rp ${formatNumber(current)} / gram`;
     } else {
       element.textContent = `Perak: Rp ${formatNumber(current)} / gram`;
     }
 
-    if (current === end) {
-      clearInterval(timer);
-    }
+    if (current === end) clearInterval(timer);
   }, stepTime);
 }
 
-// Format number dengan separator
 function formatNumber(num) {
   return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 }
 
-// Efek partikel emas (optional)
 function createGoldParticles() {
   const heroSection = document.querySelector('.hero');
   if (!heroSection) return;
@@ -149,8 +149,21 @@ function createGoldParticles() {
     heroSection.appendChild(particle);
   }
 }
+// Smooth scroll untuk semua anchor link
+const navLinks = document.querySelectorAll('header nav a[href^="#"]');
 
-// Jalankan efek partikel setelah halaman dimuat
-window.addEventListener('load', function () {
-  createGoldParticles();
+navLinks.forEach(link => {
+  link.addEventListener('click', function (e) {
+    e.preventDefault(); // cegah default jump
+
+    const targetId = this.getAttribute('href').substring(1);
+    const targetSection = document.getElementById(targetId);
+
+    if (targetSection) {
+      window.scrollTo({
+        top: targetSection.offsetTop - 70, // offset untuk header fixed
+        behavior: 'smooth'
+      });
+    }
+  });
 });
