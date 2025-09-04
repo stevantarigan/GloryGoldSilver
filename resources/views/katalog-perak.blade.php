@@ -37,7 +37,7 @@
                 </div>
                 <div class="produk-content">
                     <h4>Perak 100g</h4>
-                    <p>Investasi stabil dengan nilai yang mudah dijangkau.</p>
+                    <p>Investasi stabil densilvergan nilai yang mudah dijangkau.</p>
                     <a href="#" class="btn-silver">Lihat Detail</a>
                 </div>
             </div>

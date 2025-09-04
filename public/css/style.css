@@ -58,13 +58,16 @@ header .logo h1 {
     font-size: 1.8rem;
     text-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
 }
+
 .logo-link {
     text-decoration: none;
-    color: inherit; /* ikut warna default header */
+    color: inherit;
+    /* ikut warna default header */
 }
 
 .logo-link:hover {
-    opacity: 0.85; /* efek hover tipis */
+    opacity: 0.85;
+    /* efek hover tipis */
 }
 
 header nav {
@@ -228,6 +231,43 @@ section {
 }
 
 .btn-gold:hover::before {
+    left: 100%;
+}
+
+.btn-silver1 {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--silver-primary) 0%, var(--silver-secondary) 100%);
+    color: var(--dark-charcoal);
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(192, 192, 192, 0.4);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-silver1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: 0.5s;
+}
+
+.btn-silver1:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(192, 192, 192, 0.6);
+    color: var(--dark-charcoal);
+}
+
+.btn-silver1:hover::before {
     left: 100%;
 }
 
