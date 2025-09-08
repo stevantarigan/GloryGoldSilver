@@ -153,15 +153,40 @@ header nav a:hover::after {
     cursor: pointer;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 2rem;
+/* Footer Bar */
+.footer-bar {
     background: var(--dark-charcoal);
-    color: var(--off-white);
-    margin-top: 0;
     border-top: 2px solid var(--gold-primary);
+    padding: 1.2rem 2rem;
 }
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-copy {
+    color: var(--off-white);
+    font-size: 0.95rem;
+}
+
+.footer-social a {
+    color: var(--off-white);
+    margin-left: 1rem;
+    font-size: 1.3rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: var(--gold-primary);
+    transform: translateY(-3px);
+}
+
+
+
 
 /* Section Common Styles */
 section {

@@ -1,22 +1,21 @@
 /* ============================
-           Kontak Section
-           ============================ */
+   Kontak Section
+============================ */
 .kontak {
     padding: 8rem 1.5rem;
-    background: linear-gradient(to bottom, var(--dark-charcoal), var(--dark-gray));
+    background: linear-gradient(to bottom, rgba(20,20,20,0.95), rgba(40,40,40,0.95));
     text-align: center;
     position: relative;
+    overflow: hidden;
 }
 
 .kontak::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80') center center / cover fixed;
-    opacity: 0.1;
+    inset: 0;
+    background: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80') 
+                center center / cover fixed;
+    opacity: 0.25;   /* lebih kelihatan background */
     z-index: 1;
 }
 
@@ -25,10 +24,50 @@
     margin: 0 auto;
     position: relative;
     z-index: 2;
+    animation: fadeUp 1s ease-in-out;
 }
 
-.kontak-container p {
-    font-size: 1.2rem;
+.kontak-container h3 {
     color: var(--off-white);
-    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.kontak-container .kontak-text {
+    font-size: 1.25rem;
+    color: var(--off-white);
+    margin-bottom: 2.5rem;
+    line-height: 1.8;
+}
+
+/* Tombol WhatsApp khusus */
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: linear-gradient(135deg, #25d366, #128c7e);
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.5);
+}
+
+/* Animasi Fade */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
