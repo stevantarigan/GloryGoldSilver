@@ -3,16 +3,10 @@
 @section('title', 'Katalog Emas Batangan - Glory Gold')
 
 @section('content')
-    <!-- Tombol Back ke Home -->
-    <a href="{{ url('/') }}" class="btn-gold back-home-btn">
-        ← Back ke Home
-    </a>
-    <section id="katalog" class="produk">
-        <div class="section-container">
-
-
-            <h3 class="section-title">Katalog Emas Batangan</h3>
-            <p class="section-subtitle">Pilih ukuran emas batangan sesuai kebutuhan investasimu</p>
+<section id="katalog" class="produk">
+    <div class="section-container">
+        <h3 class="section-title">Katalog Emas Batangan</h3>
+        <p class="section-subtitle">Pilih ukuran emas batangan sesuai kebutuhan investasimu</p>
 
             <div class="produk-grid">
                 <div class="produk-card animate-fade">

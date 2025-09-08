@@ -204,9 +204,3 @@
     display: inline-block;
     text-transform: none;
 }
-.back-home-btn {
-    position: fixed;
-    top: 100px;   /* atur sesuai tinggi header */
-    left: 20px;
-    z-index: 9999;
-}
