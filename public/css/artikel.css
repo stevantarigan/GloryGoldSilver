@@ -1,0 +1,199 @@
+/* ============================
+   Artikel Home Section
+   ============================ */
+.artikel-home {
+    padding: 5rem 0;
+    background: linear-gradient(to bottom, var(--dark-charcoal), var(--dark-gray));
+    position: relative;
+}
+
+.artikel-home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://images.unsplash.com/photo-1616401784845-1804dd1b1915') no-repeat center center/cover;
+    opacity: 0.03;
+    z-index: 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 2;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--gold-primary) 0%, var(--gold-light) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.section-subtitle {
+    color: var(--off-white);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+}
+
+.section-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--gold-primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.section-link:hover {
+    color: var(--gold-light);
+    gap: 0.8rem;
+}
+
+.artikel-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.artikel-card {
+    background: rgba(26, 26, 26, 0.8);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    transition: all 0.4s ease;
+    backdrop-filter: blur(10px);
+    border: 2px solid var(--gold-primary);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.artikel-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(212, 175, 55, 0.25);
+    border-color: var(--gold-secondary);
+}
+
+.artikel-image {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.artikel-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.artikel-card:hover .artikel-image img {
+    transform: scale(1.1);
+}
+
+.artikel-category {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: linear-gradient(135deg, var(--gold-primary) 0%, var(--gold-secondary) 100%);
+    color: var(--dark-charcoal);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.artikel-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.artikel-date {
+    color: var(--gold-primary);
+    font-size: 0.85rem;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.artikel-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--off-white);
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.artikel-excerpt {
+    color: var(--off-white);
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+.artikel-link {
+    display: inline-flex;
+    align-items: center;
+    color: var(--gold-primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: auto;
+}
+
+.artikel-link:hover {
+    color: var(--gold-light);
+    gap: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .artikel-home {
+        padding: 3rem 0;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+    }
+    
+    .artikel-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .artikel-title {
+        font-size: 1.2rem;
+    }
+    
+    .artikel-content {
+        padding: 1.2rem;
+    }
+}

@@ -15,6 +15,7 @@
         </div>
         <a href="#harga">Harga</a>
         <a href="#tentang">Tentang</a>
+        <a href="#artikel">Artikel</a>
         <a href="#kontak">Kontak</a>
     </nav>
 </header>
