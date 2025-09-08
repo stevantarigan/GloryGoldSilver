@@ -3,10 +3,14 @@
 @section('title', 'Katalog Perak Batangan - Glory Gold')
 
 @section('content')
-<section id="katalog-perak" class="produk perak">
-    <div class="section-container">
-        <h3 class="section-title">Katalog Perak Batangan</h3>
-        <p class="section-subtitle">Diversifikasi asetmu dengan koleksi perak batangan berkualitas</p>
+    <!-- Tombol Back ke Home -->
+    <a href="{{ url('/') }}" class="btn-silver1 back-home-btn">
+        ← Back ke Home
+    </a>
+    <section id="katalog-perak" class="produk perak">
+        <div class="section-container">
+            <h3 class="section-title">Katalog Perak Batangan</h3>
+            <p class="section-subtitle">Diversifikasi asetmu dengan koleksi perak batangan berkualitas</p>
 
             <div class="produk-grid">
                 @forelse ($products as $product)
