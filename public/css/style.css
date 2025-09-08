@@ -1,7 +1,6 @@
 /* ============================
            Global Styles
            ============================ */
-
 :root {
     --gold-primary: #D4AF37;
     --gold-secondary: #B8860B;
@@ -12,6 +11,8 @@
     --maroon: #800020;
     --white: #FFFFFF;
     --off-white: #F5F5F5;
+    --silver-primary: #c0c0c0;
+    --silver-secondary: #e0e0e0;
 }
 
 * {
