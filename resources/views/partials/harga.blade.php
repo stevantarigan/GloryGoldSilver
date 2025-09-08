@@ -18,9 +18,9 @@
                 </div>
                 
                 <p class="harga-note">*Harga dapat berubah sesuai kondisi pasar</p>
-            </div>
-            <div class="api-status" id="api-status">
+                <div class="api-status" id="api-status">
                 <i class="fas fa-sync-alt fa-spin"></i> <span id="status-text">Memperbarui harga...</span>
+            </div>
             </div>
         </div>
     </section>
