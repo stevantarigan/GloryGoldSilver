@@ -1,6 +1,7 @@
 <header>
     <div class="logo">
         <a href="{{ url('/') }}" class="logo-link">
+            <i class="fas fa-crown logo-icon"></i>
             <h1>Glory Gold</h1>
         </a>
     </div>
@@ -16,7 +17,4 @@
         <a href="#tentang">Tentang</a>
         <a href="#kontak">Kontak</a>
     </nav>
-    <div class="mobile-menu-btn">
-        <i class="fas fa-bars"></i>
-    </div>
 </header>
