@@ -6,8 +6,8 @@
     @include('partials.hero')
     @include('partials.produk')
     @include('partials.harga')
+    @include('partials.artikel')
     @include('partials.tentang')
     @include('partials.kontak')
 
 @endsection
-
