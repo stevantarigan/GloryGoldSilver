@@ -5,6 +5,9 @@
             <h1>Glory Gold</h1>
         </a>
     </div>
+
+    {{-- Tampilkan menu navigasi hanya jika bukan halaman artikel lengkap atau detail --}}
+    @if (!Request::routeIs('artikel.index') && !Request::routeIs('artikel.show'))
     <nav>
         <div class="nav-item">
             <a href="#produk">Produk <i class="fas fa-chevron-down"></i></a>
@@ -18,4 +21,5 @@
         <a href="#artikel">Artikel</a>
         <a href="#kontak">Kontak</a>
     </nav>
+    @endif
 </header>
