@@ -1,3 +1,4 @@
+
 <footer class="footer-bar">
     <div class="footer-content">
         <p class="footer-copy">&copy; 2025 Glory Gold. Semua Hak Dilindungi.</p>
