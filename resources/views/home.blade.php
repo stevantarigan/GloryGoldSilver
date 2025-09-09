@@ -7,7 +7,7 @@
     @include('partials.produk')
     @include('partials.harga')
     @include('partials.tentang')
-    @include('partials.artikel')
+@include('partials.artikel', ['articles' => $articles])
     @include('partials.kontak')
 
 @endsection
