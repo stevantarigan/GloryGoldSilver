@@ -35,6 +35,7 @@
                     <p>Belum ada produk emas tersedia.</p>
                 @endforelse
             </div>
+
         </div>
     </section>
 

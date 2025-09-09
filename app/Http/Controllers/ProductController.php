@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
-use App\Models\Product; // <-- tambahin ini
+
 
 class ProductController extends Controller
 {
