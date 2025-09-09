@@ -1,6 +1,6 @@
-{{-- ============================ --}}
-{{-- Artikel Section --}}
-{{-- ============================ --}}
+<!-- ============================ -->
+<!-- Artikel Section -->
+<!-- ============================ -->
 <section id="artikel" class="artikel">
     <div class="section-container">
         <div class="section-header">
@@ -10,7 +10,7 @@
         </div>
 
         <div class="artikel-grid">
-            {{-- Artikel 1 --}}
+            <!-- Artikel 1 -->
             <article class="artikel-card">
                 <div class="artikel-image">
                     <img src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
@@ -30,7 +30,7 @@
                 </div>
             </article>
 
-            {{-- Artikel 3 --}}
+            <!-- Artikel 3 -->
             <article class="artikel-card">
                 <div class="artikel-image">
                     <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
@@ -50,7 +50,7 @@
                 </div>
             </article>
 
-            {{-- Artikel 4 --}}
+            <!-- Artikel 4 -->
             <article class="artikel-card">
                 <div class="artikel-image">
                     <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
