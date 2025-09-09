@@ -19,12 +19,9 @@
                 
                 <p class="harga-note">*Harga dapat berubah sesuai kondisi pasar</p>
                 <div class="api-status" id="api-status">
-<<<<<<< Updated upstream
                 <i class="fas fa-sync-alt fa-spin"></i> <span id="status-text">Memperbarui harga...</span>
-=======
                     <i class="fas fa-sync-alt fa-spin"></i> <span id="status-text">Memperbarui harga...</span>
                 </div>
->>>>>>> Stashed changes
             </div>
             </div>
         </div>

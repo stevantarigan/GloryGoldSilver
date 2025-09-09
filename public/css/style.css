@@ -309,11 +309,21 @@ header nav a:hover::after {
     margin-left: 1rem;
     font-size: 1.3rem;
     transition: color 0.3s ease, transform 0.3s ease;
+    text-decoration: none !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    background: none !important;
 }
 
 .footer-social a:hover {
     color: var(--gold-primary);
     transform: translateY(-3px);
+    text-decoration: none !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    background: none !important;
 }
 
 /* Section Common Styles */
