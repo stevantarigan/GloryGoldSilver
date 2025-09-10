@@ -28,7 +28,7 @@
                             <h4>{{ $product->name }}</h4>
                             <p>{{ $product->description }}</p>
                             <p><strong>Rp {{ number_format($product->price, 0, ',', '.') }}</strong></p>
-                            <a href="#" class="btn-silver">Lihat Detail</a>
+                            <a href="#" class="btn-silver1">Lihat Detail</a>
                         </div>
                     </div>
                 @empty
