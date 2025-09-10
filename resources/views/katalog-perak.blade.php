@@ -28,7 +28,11 @@
                             <h4>{{ $product->name }}</h4>
                             <p>{{ $product->description }}</p>
                             <p><strong>Rp {{ number_format($product->price, 0, ',', '.') }}</strong></p>
-                            <a href="#" class="btn-silver1">Lihat Detail</a>
+                            <a href="https://wa.me/6281904104102?text={{ urlencode('Halo Glory Gold, saya ingin bertanya tentang produk ' . $product->name . ' dengan harga Rp' . number_format($product->price, 0, ',', '.')) }}"
+                                class="btn-silver1" target="_blank">
+                                Lihat Detail
+                            </a>
+
                         </div>
                     </div>
                 @empty
