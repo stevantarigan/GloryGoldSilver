@@ -4,11 +4,11 @@
         <p class="section-subtitle">Baca informasi seputar emas, perak, dan investasi</p>
 
         <div class="artikel-grid">
-            @foreach($articles->take(3) as $article)
+            @foreach ($articles->take(3) as $article)
                 <div class="artikel-card">
                     <div class="artikel-image">
                         <img src="{{ $article->thumbnail ?? asset('images/default-article.jpg') }}"
-                             alt="{{ $article->title }}">
+                            alt="{{ $article->title }}">
                     </div>
                     <div class="artikel-content">
                         <h3 class="artikel-title">
