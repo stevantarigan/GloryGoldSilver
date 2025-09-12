@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'Glory Gold - Investasi Emas & Perak')</title>
-
+    {{-- Logo di Tab --}}
+    <link rel="icon" type="image/png" href="{{ asset('images/logo3.png') }}">
     {{-- CSS Global --}}
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/hero.css') }}">
