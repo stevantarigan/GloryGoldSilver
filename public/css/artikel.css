@@ -305,3 +305,12 @@
     color: var(--dark-charcoal);
     border-color: var(--gold-primary);
 }
+.back-home-btn {
+    position: fixed;
+    top: 100px; /* jarak dari atas, bisa disesuaikan */
+    left: 20px; /* jarak dari kiri */
+    z-index: 9999;
+    padding: 0.8rem 1.5rem;
+    font-size: 0.95rem;
+    border-radius: 30px;
+}
