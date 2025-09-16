@@ -161,7 +161,11 @@
     margin-bottom: 1rem;
     background: linear-gradient(135deg, var(--gold-primary), var(--gold-light));
     -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* Chrome/Safari */
     color: transparent;
+    /* fallback */
     text-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
 }
 
@@ -217,13 +221,27 @@
 
 /* Animations */
 @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes fadeDown {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .artikel-title a {
@@ -305,10 +323,13 @@
     color: var(--dark-charcoal);
     border-color: var(--gold-primary);
 }
+
 .back-home-btn {
     position: fixed;
-    top: 100px; /* jarak dari atas, bisa disesuaikan */
-    left: 20px; /* jarak dari kiri */
+    top: 100px;
+    /* jarak dari atas, bisa disesuaikan */
+    left: 20px;
+    /* jarak dari kiri */
     z-index: 9999;
     padding: 0.8rem 1.5rem;
     font-size: 0.95rem;
