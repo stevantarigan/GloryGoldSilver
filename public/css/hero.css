@@ -1,332 +1,376 @@
 /* ============================
            Hero Section Mewah dengan Glowing Effect
 ============================ */
-        .hero {
-            position: relative;
-            height: 100vh;
-            background: url('https://images.unsplash.com/photo-1616401784845-1804dd1b1915') no-repeat center center/cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            overflow: hidden;
-        }
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1616401784845-1804dd1b1915') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(10, 10, 10, 0.85) 0%, rgba(20, 20, 20, 0.7) 100%);
-            z-index: 1;
-        }
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(10, 10, 10, 0.85) 0%, rgba(20, 20, 20, 0.7) 100%);
+    z-index: 1;
+}
 
-        .hero::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.2) 0%, transparent 50%);
-            z-index: 2;
-        }
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.2) 0%, transparent 50%);
+    z-index: 2;
+}
 
-        .hero-content {
-            position: relative;
-            z-index: 10;
-            max-width: 800px;
-            padding: 2rem;
-            animation: fadeInUp 1.5s ease-out;
-        }
+.hero-content {
+    position: relative;
+    z-index: 10;
+    max-width: 800px;
+    padding: 2rem;
+    animation: fadeInUp 1.5s ease-out;
+}
 
-        .hero-title {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            line-height: 1.2;
-            position: relative;
-            padding: 1rem;
-        }
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    position: relative;
+    padding: 1rem;
+}
 
-        .hero-title .gold-text {
-            background: linear-gradient(135deg, var(--gold-primary) 0%, var(--gold-light) 100%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 0 0 15px rgba(212, 175, 55, 0.8);
-            position: relative;
-            z-index: 2;
-            animation: goldGlow 3s infinite alternate;
-        }
+.hero-title .gold-text {
+    background: linear-gradient(135deg, var(--gold-primary) 0%, var(--gold-light) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 15px rgba(212, 175, 55, 0.8);
+    position: relative;
+    z-index: 2;
+    animation: goldGlow 3s infinite alternate;
+}
 
-        .hero-title .silver-text {
-            background: linear-gradient(135deg, var(--silver-primary) 0%, var(--silver-secondary) 100%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 0 0 15px rgba(192, 192, 192, 0.8);
-            position: relative;
-            z-index: 2;
-            animation: silverGlow 3s infinite alternate;
-        }
+.hero-title .silver-text {
+    background: linear-gradient(135deg, var(--silver-primary) 0%, var(--silver-secondary) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 15px rgba(192, 192, 192, 0.8);
+    position: relative;
+    z-index: 2;
+    animation: silverGlow 3s infinite alternate;
+}
 
-        /* Efek glowing untuk teks emas */
-        @keyframes goldGlow {
-            0% {
-                text-shadow: 0 0 10px rgba(212, 175, 55, 0.8), 0 0 20px rgba(212, 175, 55, 0.6);
-            }
-            100% {
-                text-shadow: 0 0 20px rgba(212, 175, 55, 0.9), 0 0 30px rgba(212, 175, 55, 0.7), 0 0 40px rgba(212, 175, 55, 0.5);
-            }
-        }
+/* Efek glowing untuk teks emas */
+@keyframes goldGlow {
+    0% {
+        text-shadow: 0 0 10px rgba(212, 175, 55, 0.8), 0 0 20px rgba(212, 175, 55, 0.6);
+    }
 
-        /* Efek glowing untuk teks perak */
-        @keyframes silverGlow {
-            0% {
-                text-shadow: 0 0 10px rgba(192, 192, 192, 0.8), 0 0 20px rgba(192, 192, 192, 0.6);
-            }
-            100% {
-                text-shadow: 0 0 20px rgba(192, 192, 192, 0.9), 0 0 30px rgba(192, 192, 192, 0.7), 0 0 40px rgba(192, 192, 192, 0.5);
-            }
-        }
+    100% {
+        text-shadow: 0 0 20px rgba(212, 175, 55, 0.9), 0 0 30px rgba(212, 175, 55, 0.7), 0 0 40px rgba(212, 175, 55, 0.5);
+    }
+}
 
-        /* Lingkaran glowing di belakang teks */
-        .glowing-circle {
-            position: absolute;
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            filter: blur(60px);
-            z-index: 1;
-            opacity: 0.5;
-            animation: float 6s infinite ease-in-out;
-        }
+/* Efek glowing untuk teks perak */
+@keyframes silverGlow {
+    0% {
+        text-shadow: 0 0 10px rgba(192, 192, 192, 0.8), 0 0 20px rgba(192, 192, 192, 0.6);
+    }
 
-        .glowing-circle.gold {
-            background: radial-gradient(circle, var(--gold-primary) 0%, transparent 70%);
-            top: -50px;
-            left: -50px;
-            animation-delay: 0s;
-        }
+    100% {
+        text-shadow: 0 0 20px rgba(192, 192, 192, 0.9), 0 0 30px rgba(192, 192, 192, 0.7), 0 0 40px rgba(192, 192, 192, 0.5);
+    }
+}
 
-        .glowing-circle.silver {
-            background: radial-gradient(circle, var(--silver-primary) 0%, transparent 70%);
-            bottom: -50px;
-            right: -50px;
-            animation-delay: 1.5s;
-        }
+/* Lingkaran glowing di belakang teks */
+.glowing-circle {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    filter: blur(60px);
+    z-index: 1;
+    opacity: 0.5;
+    animation: float 6s infinite ease-in-out;
+}
 
-        .hero-description {
-            font-size: 1.4rem;
-            color: var(--off-white);
-            margin-bottom: 2.5rem;
-            line-height: 1.6;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            position: relative;
-            z-index: 2;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-        }
+.glowing-circle.gold {
+    background: radial-gradient(circle, var(--gold-primary) 0%, transparent 70%);
+    top: -50px;
+    left: -50px;
+    animation-delay: 0s;
+}
 
-        .btn-container {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            position: relative;
-            z-index: 2;
-        }
+.glowing-circle.silver {
+    background: radial-gradient(circle, var(--silver-primary) 0%, transparent 70%);
+    bottom: -50px;
+    right: -50px;
+    animation-delay: 1.5s;
+}
 
-        .btn-gold {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--gold-primary) 0%, var(--gold-secondary) 100%);
-            color: var(--dark-charcoal);
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            font-weight: 600;
-            text-decoration: none;
-            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            border: none;
-            cursor: pointer;
-            animation: pulseGold 2s infinite;
-        }
+.hero-description {
+    font-size: 1.4rem;
+    color: var(--off-white);
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
 
-        .btn-gold::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-            transition: 0.5s;
-        }
+.btn-container {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+}
 
-        .btn-gold:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.6);
-            color: var(--dark-charcoal);
-            animation: none;
-        }
+.btn-gold {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--gold-primary) 0%, var(--gold-secondary) 100%);
+    color: var(--dark-charcoal);
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    cursor: pointer;
+    animation: pulseGold 2s infinite;
+}
 
-        .btn-gold:hover::before {
-            left: 100%;
-        }
+.btn-gold::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: 0.5s;
+}
 
-        @keyframes pulseGold {
-            0% {
-                box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7);
-            }
-            70% {
-                box-shadow: 0 0 0 15px rgba(212, 175, 55, 0);
-            }
-            100% {
-                box-shadow: 0 0 0 0 rgba(212, 175, 55, 0);
-            }
-        }
+.btn-gold:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.6);
+    color: var(--dark-charcoal);
+    animation: none;
+}
 
-        .btn-silver1 {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--silver-primary) 0%, var(--silver-secondary) 100%);
-            color: var(--dark-charcoal);
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            font-weight: 600;
-            text-decoration: none;
-            box-shadow: 0 5px 15px rgba(192, 192, 192, 0.4);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            border: none;
-            cursor: pointer;
-            animation: pulseSilver 2s infinite;
-            animation-delay: 1s;
-        }
+.btn-gold:hover::before {
+    left: 100%;
+}
 
-        .btn-silver1::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-            transition: 0.5s;
-        }
+@keyframes pulseGold {
+    0% {
+        box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7);
+    }
 
-        .btn-silver1:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(192, 192, 192, 0.6);
-            color: var(--dark-charcoal);
-            animation: none;
-        }
+    70% {
+        box-shadow: 0 0 0 15px rgba(212, 175, 55, 0);
+    }
 
-        .btn-silver1:hover::before {
-            left: 100%;
-        }
+    100% {
+        box-shadow: 0 0 0 0 rgba(212, 175, 55, 0);
+    }
+}
 
-        @keyframes pulseSilver {
-            0% {
-                box-shadow: 0 0 0 0 rgba(192, 192, 192, 0.7);
-            }
-            70% {
-                box-shadow: 0 0 0 15px rgba(192, 192, 192, 0);
-            }
-            100% {
-                box-shadow: 0 0 0 0 rgba(192, 192, 192, 0);
-            }
-        }
+.btn-silver1 {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--silver-primary) 0%, var(--silver-secondary) 100%);
+    color: var(--dark-charcoal);
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(192, 192, 192, 0.4);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    cursor: pointer;
+    animation: pulseSilver 2s infinite;
+    animation-delay: 1s;
+}
 
-        /* Partikel emas dan perak yang jatuh */
-        .particle {
-            position: absolute;
-            background: var(--gold-primary);
-            border-radius: 50%;
-            opacity: 0;
-            animation: fall linear infinite;
-            z-index: 1;
-        }
+.btn-silver1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: 0.5s;
+}
 
-        .particle.silver {
-            background: var(--silver-primary);
-        }
+.btn-silver1:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(192, 192, 192, 0.6);
+    color: var(--dark-charcoal);
+    animation: none;
+}
 
-        @keyframes fall {
-            0% {
-                transform: translateY(-100px) rotate(0deg);
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(100vh) rotate(360deg);
-                opacity: 0;
-            }
-        }
+.btn-silver1:hover::before {
+    left: 100%;
+}
 
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+@keyframes pulseSilver {
+    0% {
+        box-shadow: 0 0 0 0 rgba(192, 192, 192, 0.7);
+    }
 
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0) scale(1);
-            }
-            50% {
-                transform: translateY(-20px) scale(1.05);
-            }
-        }
+    70% {
+        box-shadow: 0 0 0 15px rgba(192, 192, 192, 0);
+    }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .hero-title {
-                font-size: 2.5rem;
-            }
-            
-            .hero-description {
-                font-size: 1.2rem;
-            }
-            
-            .btn-container {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .btn-gold, .btn-silver1 {
-                width: 100%;
-                max-width: 250px;
-                text-align: center;
-            }
+    100% {
+        box-shadow: 0 0 0 0 rgba(192, 192, 192, 0);
+    }
+}
 
-            .glowing-circle {
-                width: 200px;
-                height: 200px;
-                filter: blur(40px);
-            }
-        }
+/* Partikel emas dan perak yang jatuh */
+.particle {
+    position: absolute;
+    background: var(--gold-primary);
+    border-radius: 50%;
+    opacity: 0;
+    animation: fall linear infinite;
+    z-index: 1;
+}
 
-        @media (max-width: 480px) {
-            .hero-title {
-                font-size: 2rem;
-            }
-            
-            .hero-description {
-                font-size: 1rem;
-            }
-        }
+.particle.silver {
+    background: var(--silver-primary);
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-20px) scale(1.05);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-description {
+        font-size: 1.2rem;
+    }
+
+    .btn-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-gold,
+    .btn-silver1 {
+        width: 100%;
+        max-width: 250px;
+        text-align: center;
+    }
+
+    .glowing-circle {
+        width: 200px;
+        height: 200px;
+        filter: blur(40px);
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+}
+
+/* Logo dalam hero */
+.logoHero-img {
+    height: 120px;
+    margin-bottom: 1.5rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 10;
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.6));
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logoHero-img:hover {
+      transform: scale(1.05);
+    filter: drop-shadow(0 8px 25px rgba(212,175,55,0.8));
+}
+
+/* Responsive logo */
+@media (max-width: 768px) {
+    .logo-hero {
+        height: 90px;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-hero {
+        height: 70px;
+    }
+}
